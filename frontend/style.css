@@ -5,11 +5,23 @@ h1 {
   color: red;
 }
 
-.navi {
-  background-color: beige;
-  border-color: black;
-  border-width: 2px;
+.navbar {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border-width: 3px;
   border-style: solid;
+  border-color: black;
+  padding: 20px;
+  background-color: beige;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: navy;
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
 }
 
 .card {
@@ -31,6 +43,7 @@ h1 {
 }
 body {
   background-color: khaki;
+  margin: 0px;
 }
 
 .card img {
@@ -43,4 +56,10 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   background-color: chocolate;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  font-variant: small-caps;
 }
