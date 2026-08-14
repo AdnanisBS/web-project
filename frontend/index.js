@@ -25,3 +25,21 @@ function toggle() {
   document.getElementById("card-gender").innerText = users[curIndex].gender;
   document.getElementById("card-name").innerText = users[curIndex].name;
 }
+
+function random() {
+  fetch("https://randomuser.me/api")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var detail = data.results[0];
+
+      document.getElementById("card-image").src = detail.picture.large;
+      document.getElementById("card-gender").innerText =
+        detail.gender.charAt(0).toUpperCase() + detail.gender.slice(1);
+
+      var fullname =
+        detail.name.title + " " + detail.name.first + " " + detail.name.last;
+      document.getElementById("card-name").innerText = fullname;
+    });
+}
